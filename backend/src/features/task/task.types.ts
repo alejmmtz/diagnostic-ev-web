@@ -5,7 +5,13 @@ export interface Task {
   date: Date;
 }
 
-export interface createTaskDTO {
+export interface CreateTaskDTO {
+  title: string;
+  completed: boolean;
+  date: Date;
+}
+
+export interface updateTaskDTO {
   title: string;
   completed: boolean;
   date: Date;
