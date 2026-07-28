@@ -7,8 +7,6 @@ export interface Task {
 
 export interface CreateTaskDTO {
   title: string;
-  completed: boolean;
-  date: Date;
 }
 
 export interface updateTaskDTO {
