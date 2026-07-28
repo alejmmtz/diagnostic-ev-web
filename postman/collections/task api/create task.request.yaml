@@ -1,0 +1,13 @@
+$kind: http-request
+method: POST
+url: '{{base_url}}/api/task'
+order: 4000
+headers:
+  - key: Content-Type
+    value: application/json
+body:
+  type: json
+  content: |-
+    {
+      "title": "Sample task"
+    }

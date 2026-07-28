@@ -1,0 +1,6 @@
+$kind: collection
+name: 'Task API'
+description: 'Collection for backend task API endpoints discovered in the project.'
+variables:
+  - key: base_url
+    value: 'http://localhost:3000'
