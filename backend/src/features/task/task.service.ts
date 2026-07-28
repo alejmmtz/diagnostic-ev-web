@@ -3,7 +3,7 @@ import { pool } from '../../config/database';
 import Boom from '@hapi/boom';
 
 export const getTasksService = async (): Promise<Task[]> => {
-  const query = 'SELECT id, title, completed, date';
+  const query = 'SELECT id, title, completed, date  FROM tasks';
   const dbRequest = await pool.query(query);
   return dbRequest.rows;
 };
@@ -11,7 +11,7 @@ export const getTasksService = async (): Promise<Task[]> => {
 export const getTaskByIdService = async (taskId: number): Promise<Task> => {
   const dbRequest = await pool.query(
     `SELECT id, title, completed, date" 
-     FROM orders WHERE id = $1`,
+     FROM tasks WHERE id = $1`,
     [taskId]
   );
 
